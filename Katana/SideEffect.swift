@@ -111,7 +111,7 @@ public struct SideEffectContext<S, D> where S: State, D: SideEffectDependencyCon
    - parameter getState: a closure that returns the current configuration of the state
    - parameter dispatch: a closure that dispatches an item
    */
-  init(dependencies: D, getState: @escaping () -> S, dispatch: @escaping AnyDispatch) {
+  public init(dependencies: D, getState: @escaping () -> S, dispatch: @escaping AnyDispatch) {
     self.dependencies = dependencies
     self.dispatchClosure = dispatch
     self.getStateClosure = getState
